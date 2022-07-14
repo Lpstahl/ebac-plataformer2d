@@ -60,14 +60,15 @@ public class Player : MonoBehaviour
     private void HandleJump()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-        myRigibody.velocity = Vector2.up * forceJump;
-        myRigibody.transform.localScale = Vector2.one;
+        {
+            myRigibody.velocity = Vector2.up * forceJump;
+            myRigibody.transform.localScale = Vector2.one;
 
-        DOTween.Kill(myRigibody.transform);
+            DOTween.Kill(myRigibody.transform);
 
-        HandleScaleJump();
+            HandleScaleJump();
+        }
     }
-
     private void HandleScaleJump()
     {
         myRigibody.transform.DOScaleY(jumpScaleY, animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease);
