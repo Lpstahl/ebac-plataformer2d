@@ -20,6 +20,12 @@ public class Player : MonoBehaviour
     public float animationDuration = .3f;
     public Ease ease = Ease.OutBack;
 
+    [Header("Animation PLayer")]
+    public string boolRun = "Run";
+    public string boolRunning = "Running";
+    public Animator animator;
+    public float playerSwipeDuration = .1f;
+
     private float _currentSpeed;
     private bool _isRunning = false;
     
@@ -31,21 +37,43 @@ public class Player : MonoBehaviour
 
     private void HandleMoviment()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift)) { 
             _currentSpeed = speedRun;
-         else
+            animator.speed = 2;
+        }
+        else
+        {
             _currentSpeed = speed;
+            animator.speed = 1;
+        }
+
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             //myRigibody.MovePosition(myRigibody.position - velocity * Time.deltaTime);
             myRigibody.velocity = new Vector2(-_currentSpeed, myRigibody.velocity.y);
+            if (myRigibody.transform.localScale.x != -1)
+            {
+                myRigibody.transform.DOScaleX(-1, playerSwipeDuration);
+            }
+            animator.SetBool(boolRun, true);
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             //myRigibody.MovePosition(myRigibody.position + velocity * Time.deltaTime);
             myRigibody.velocity = new Vector2(_currentSpeed, myRigibody.velocity.y);
+            if (myRigibody.transform.localScale.x != 1)
+            {
+                myRigibody.transform.DOScaleX(1, playerSwipeDuration);
+            }
+            animator.SetBool(boolRun, true);
         }
+        else
+        {
+            animator.SetBool(boolRun, false);
+        }
+
+        Debug.Log(myRigibody.velocity);
 
         if(myRigibody.velocity.x > 0)
         {
