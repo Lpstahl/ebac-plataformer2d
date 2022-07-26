@@ -25,10 +25,9 @@ public class Player : MonoBehaviour
     public string boolRunning = "Running";
     public Animator animator;
     public float playerSwipeDuration = .1f;
-
-    private float _currentSpeed;
-    private bool _isRunning = false;
     
+    private float _currentSpeed;
+
     private void Update()
     {
         HandleJump();
