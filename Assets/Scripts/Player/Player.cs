@@ -6,6 +6,7 @@ using DG.Tweening;
 public class Player : MonoBehaviour
 {
     public Rigidbody2D myRigibody;
+    public HealthBase healthBase;
 
     [Header("Speed setup")]
     public Vector2 friction = new Vector2(.1f,0);
@@ -23,10 +24,27 @@ public class Player : MonoBehaviour
     [Header("Animation PLayer")]
     public string boolRun = "Run";
     public string boolRunning = "Running";
+    public string triggerDeath = "Death";
     public Animator animator;
     public float playerSwipeDuration = .1f;
     
     private float _currentSpeed;
+
+    private void Awake()
+    {
+        if(healthBase != null)
+        {
+            healthBase.OnKill += OnPlayerKill;
+        }
+    }
+
+    private void OnPlayerKill()
+    {
+
+        healthBase.OnKill -= OnPlayerKill;
+        animator.SetTrigger(triggerDeath);
+        
+    }
 
     private void Update()
     {
@@ -100,5 +118,10 @@ public class Player : MonoBehaviour
     {
         myRigibody.transform.DOScaleY(jumpScaleY, animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease);
         myRigibody.transform.DOScaleX(jumpScaleX, animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease);
+    }
+
+    public void DestroyMe()
+    {
+        Destroy(gameObject);
     }
 }
