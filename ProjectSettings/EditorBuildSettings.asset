@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SCN_Cedits.unity
     guid: 4e6b990b55c0e22408b701ffafbd9a11
+  - enabled: 1
+    path: Assets/Scenes/SCN_PrototypeGameplay.unity
+    guid: 668bca9afebc59f47bc9d07b91108d9a
   m_configObjects: {}
