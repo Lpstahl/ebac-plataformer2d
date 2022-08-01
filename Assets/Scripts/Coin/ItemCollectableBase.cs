@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemCollectableBase : MonoBehaviour
 {
     public string compareTag = "Player";
+    public GameObject coin;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,7 +16,7 @@ public class ItemCollectableBase : MonoBehaviour
     }
     protected virtual void Collect()
     {
-        gameObject.SetActive(false);
+        coin.SetActive(false);
         OnCollect();
     }
     protected virtual void OnCollect() 
