@@ -11,9 +11,11 @@ public class Player : MonoBehaviour
     [Header("Setup")]
     public SOPlayerSetup soPlayerSetup;
 
-    public Animator animator;
+    //public Animator animator;
 
     private float _currentSpeed;
+
+    private Animator _currentPlayer;
 
     private void Awake()
     {
@@ -21,13 +23,15 @@ public class Player : MonoBehaviour
         {
             healthBase.OnKill += OnPlayerKill;
         }
+
+        _currentPlayer = Instantiate(soPlayerSetup.player, transform);
     }
 
     private void OnPlayerKill()
     {
 
         healthBase.OnKill -= OnPlayerKill;
-        animator.SetTrigger(soPlayerSetup.triggerDeath);
+        _currentPlayer.SetTrigger(soPlayerSetup.triggerDeath);
         
     }
 
@@ -41,12 +45,12 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift)) { 
             _currentSpeed = soPlayerSetup.speedRun;
-            animator.speed = 2;
+            _currentPlayer.speed = 2;
         }
         else
         {
             _currentSpeed = soPlayerSetup.speed;
-            animator.speed = 1;
+            _currentPlayer.speed = 1;
         }
 
 
@@ -58,7 +62,7 @@ public class Player : MonoBehaviour
             {
                 myRigibody.transform.DOScaleX(-1, soPlayerSetup.playerSwipeDuration);
             }
-            animator.SetBool(soPlayerSetup.boolRun, true);
+            _currentPlayer.SetBool(soPlayerSetup.boolRun, true);
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
@@ -68,11 +72,12 @@ public class Player : MonoBehaviour
             {
                 myRigibody.transform.DOScaleX(1, soPlayerSetup.playerSwipeDuration);
             }
-            animator.SetBool(soPlayerSetup.boolRun, true);
+            _currentPlayer.SetBool(soPlayerSetup.boolRun, true);
         }
         else
         {
-            animator.SetBool(soPlayerSetup.boolRun, false);
+            _currentPlayer.SetBool(soPlayerSetup.boolRun, false);
+            _currentPlayer.SetBool(soPlayerSetup.boolRun, false);
         }
 
         Debug.Log(myRigibody.velocity);
