@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19d0c19b08cc747428511bfaac9a74e6, type: 3}
-  m_Name: SOString_Player02_name
+  m_Script: {fileID: 11500000, guid: 9e0bf334ff95c6d47af05b7938f2c148, type: 3}
+  m_Name: SOInt_Coins_01
   m_EditorClassIdentifier: 
-  value: Ze
+  value: 0

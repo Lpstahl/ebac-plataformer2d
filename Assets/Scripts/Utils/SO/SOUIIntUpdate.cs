@@ -7,6 +7,7 @@ public class SOUIIntUpdate : MonoBehaviour
 {
     public SOInt soInt;
     public TextMeshProUGUI uiTExtValue;
+    public GameObject Coin;
 
     // Start is called before the first frame update
     void Start()

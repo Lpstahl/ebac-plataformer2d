@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e0bf334ff95c6d47af05b7938f2c148, type: 3}
-  m_Name: SOInt_Coins
+  m_Name: SOInt_Coins_02
   m_EditorClassIdentifier: 
   value: 0
