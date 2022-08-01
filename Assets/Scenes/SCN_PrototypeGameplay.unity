@@ -662,6 +662,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1655559944}
+  - {fileID: 1885001191}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1453,6 +1454,7 @@ GameObject:
   - component: {fileID: 427361030}
   - component: {fileID: 427361032}
   - component: {fileID: 427361031}
+  - component: {fileID: 427361033}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1576,6 +1578,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427361029}
   m_CullTransparentMesh: 1
+--- !u!114 &427361033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427361029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529ff9693aafa1249bbe7fde4d33b0bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soInt: {fileID: 11400000, guid: 6f9c89351fdd27b4098db1c0c11f4420, type: 2}
+  uiTExtValue: {fileID: 427361031}
 --- !u!212 &499453438 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 1637968192941115163, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
@@ -4870,7 +4886,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d51640c2a1984c940ad480b23c48a3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 0
+  coins: {fileID: 11400000, guid: 6f9c89351fdd27b4098db1c0c11f4420, type: 2}
+  uiTextCoins: {fileID: 427361031}
 --- !u!4 &1655559944
 Transform:
   m_ObjectHideFlags: 0
@@ -5278,6 +5295,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1885001190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1885001191}
+  - component: {fileID: 1885001192}
+  m_Layer: 0
+  m_Name: UIInGameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1885001191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885001190}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 94890467}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1885001192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885001190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad60bd50467a790408ba8b99f93245c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiTextCoins: {fileID: 427361031}
 --- !u!212 &1902359307 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 7803505671189439292, guid: e0d57717ad485d748986ddb9eba2beb8, type: 3}
@@ -5963,6 +6024,22 @@ PrefabInstance:
       propertyPath: jumpScaleY
       value: 1.1
       objectReference: {fileID: 0}
+    - target: {fileID: 3675993728335788440, guid: e3e3ed5e3f82efc4db31fd8fa7799117, type: 3}
+      propertyPath: soJumpScaleX
+      value: 
+      objectReference: {fileID: 11400000, guid: b85a9233ff18dca47a8f90f7313b3a9e, type: 2}
+    - target: {fileID: 3675993728335788440, guid: e3e3ed5e3f82efc4db31fd8fa7799117, type: 3}
+      propertyPath: soJumpScaleY
+      value: 
+      objectReference: {fileID: 11400000, guid: fc38f067ca028304092879328af975bc, type: 2}
+    - target: {fileID: 3675993728335788440, guid: e3e3ed5e3f82efc4db31fd8fa7799117, type: 3}
+      propertyPath: soPlayerSetup
+      value: 
+      objectReference: {fileID: 11400000, guid: 85c8121326bbe954e844039c069a8369, type: 2}
+    - target: {fileID: 3675993728335788440, guid: e3e3ed5e3f82efc4db31fd8fa7799117, type: 3}
+      propertyPath: soAnimationDuration
+      value: 
+      objectReference: {fileID: 11400000, guid: 0d92be168c437e548b9ee35e8925f15c, type: 2}
     - target: {fileID: 3675993728335788441, guid: e3e3ed5e3f82efc4db31fd8fa7799117, type: 3}
       propertyPath: _flashColor
       value: 
