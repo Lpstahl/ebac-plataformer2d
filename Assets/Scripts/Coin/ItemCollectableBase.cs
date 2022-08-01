@@ -16,7 +16,7 @@ public class ItemCollectableBase : MonoBehaviour
     }
     protected virtual void Collect()
     {
-        coin.SetActive(false);
+        coin.gameObject.SetActive(false);
         OnCollect();
     }
     protected virtual void OnCollect() 
