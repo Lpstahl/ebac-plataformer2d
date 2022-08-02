@@ -4,10 +4,24 @@ using UnityEngine;
 
 public class ItemCollectableCoin : ItemCollectableBase
 {
+    public CoinType coinType;
+
     protected override void OnCollect()
     {
         base.OnCollect();
-        ItemManager.instance.AddCoins();
-        ItemManager.instance.AddCoinsRed();
+        if (coinType == CoinType.Normal)
+        {
+            ItemManager.instance.AddCoins();
+        }
+        else if (coinType == CoinType.Red)
+        {
+            ItemManager.instance.AddCoinsRed();
+        }
+    }
+
+    public enum CoinType
+    {
+        Normal,
+        Red
     }
 }

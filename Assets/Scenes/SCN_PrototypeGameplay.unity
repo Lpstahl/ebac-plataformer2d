@@ -262,6 +262,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &16725074 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4272125703010702955, guid: 0b76d834e22ded442a92776761e620dd, type: 3}
+  m_PrefabInstance: {fileID: 1920229437}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &34379876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,6 +1203,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &311094725 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4272125703010702955, guid: 0b76d834e22ded442a92776761e620dd, type: 3}
+  m_PrefabInstance: {fileID: 1580269563}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &315538415
 GameObject:
   m_ObjectHideFlags: 0
@@ -3107,6 +3117,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1126519656 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4272125703010702955, guid: 98410ebd23bb2574a865fe2c8a97be4d, type: 3}
+  m_PrefabInstance: {fileID: 1233389640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &1146915835 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6413013834153556191, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
@@ -3398,6 +3413,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7859602736364066969, guid: 98410ebd23bb2574a865fe2c8a97be4d, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 1126519656}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98410ebd23bb2574a865fe2c8a97be4d, type: 3}
 --- !u!1 &1234547406
@@ -4016,6 +4035,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7859602736364066969, guid: 98410ebd23bb2574a865fe2c8a97be4d, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 1448715854}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98410ebd23bb2574a865fe2c8a97be4d, type: 3}
 --- !u!1001 &1418878562
@@ -4077,6 +4100,10 @@ PrefabInstance:
       propertyPath: coin
       value: 
       objectReference: {fileID: 1248769112}
+    - target: {fileID: 7859602736364066969, guid: 0b76d834e22ded442a92776761e620dd, type: 3}
+      propertyPath: coinType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b76d834e22ded442a92776761e620dd, type: 3}
 --- !u!1001 &1436540385
@@ -4138,6 +4165,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7859602736364066969, guid: 98410ebd23bb2574a865fe2c8a97be4d, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 1721222305}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98410ebd23bb2574a865fe2c8a97be4d, type: 3}
 --- !u!1001 &1437409291
@@ -4199,8 +4230,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7859602736364066969, guid: 98410ebd23bb2574a865fe2c8a97be4d, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 1873164584}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98410ebd23bb2574a865fe2c8a97be4d, type: 3}
+--- !u!1 &1448715854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4272125703010702955, guid: 98410ebd23bb2574a865fe2c8a97be4d, type: 3}
+  m_PrefabInstance: {fileID: 1417134096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1454804227
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4698,6 +4738,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7859602736364066969, guid: 98410ebd23bb2574a865fe2c8a97be4d, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 1871536086}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98410ebd23bb2574a865fe2c8a97be4d, type: 3}
 --- !u!1001 &1547756868
@@ -5029,6 +5073,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7859602736364066969, guid: 0b76d834e22ded442a92776761e620dd, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 311094725}
+    - target: {fileID: 7859602736364066969, guid: 0b76d834e22ded442a92776761e620dd, type: 3}
+      propertyPath: coinType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b76d834e22ded442a92776761e620dd, type: 3}
 --- !u!212 &1593047573 stripped
@@ -5327,7 +5379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coins: {fileID: 11400000, guid: 6f9c89351fdd27b4098db1c0c11f4420, type: 2}
-  uiTextCoins: {fileID: 427361031}
+  coinsRed: {fileID: 0}
 --- !u!4 &1655559944
 Transform:
   m_ObjectHideFlags: 0
@@ -5533,6 +5585,11 @@ MonoBehaviour:
 Animator:
   m_CorrespondingSourceObject: {fileID: 3122169294817524646, guid: e0d57717ad485d748986ddb9eba2beb8, type: 3}
   m_PrefabInstance: {fileID: 4909908}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1721222305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4272125703010702955, guid: 98410ebd23bb2574a865fe2c8a97be4d, type: 3}
+  m_PrefabInstance: {fileID: 1436540385}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1744595367
 GameObject:
@@ -5756,6 +5813,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1871536086 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4272125703010702955, guid: 98410ebd23bb2574a865fe2c8a97be4d, type: 3}
+  m_PrefabInstance: {fileID: 1540186996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1873164584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4272125703010702955, guid: 98410ebd23bb2574a865fe2c8a97be4d, type: 3}
+  m_PrefabInstance: {fileID: 1437409291}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1885001190
 GameObject:
   m_ObjectHideFlags: 0
@@ -5800,6 +5867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiTextCoins: {fileID: 427361031}
+  uiTextRedCoins: {fileID: 60364816}
 --- !u!212 &1902359307 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 7803505671189439292, guid: e0d57717ad485d748986ddb9eba2beb8, type: 3}
@@ -5864,6 +5932,14 @@ PrefabInstance:
     - target: {fileID: 4272125703010702956, guid: 0b76d834e22ded442a92776761e620dd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859602736364066969, guid: 0b76d834e22ded442a92776761e620dd, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 16725074}
+    - target: {fileID: 7859602736364066969, guid: 0b76d834e22ded442a92776761e620dd, type: 3}
+      propertyPath: coinType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b76d834e22ded442a92776761e620dd, type: 3}

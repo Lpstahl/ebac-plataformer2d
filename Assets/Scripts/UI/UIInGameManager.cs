@@ -9,9 +9,12 @@ public class UIInGameManager : Singleton<UIInGameManager>
 
     public TextMeshProUGUI uiTextCoins;
 
-    public static void UpdateTextCoins(string s)
+    public TextMeshProUGUI uiTextRedCoins;
+
+    public static void UpdateTextCoins(string s, string s2)
     {
        instance.uiTextCoins.text = s;
+       instance.uiTextRedCoins.text = s2;
     }
 
     
