@@ -146,14 +146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigibody: {fileID: 3675993728335788444}
-  friction: {x: 0.1, y: 0}
-  speed: 15
-  speedRun: 18
-  forceJump: 15
-  jumpScaleY: 1.5
-  jumpScaleX: 0.7
-  animationDuration: 0.3
-  ease: 27
+  healthBase: {fileID: 3675993728335788441}
+  soPlayerSetup: {fileID: 11400000, guid: 85c8121326bbe954e844039c069a8369, type: 2}
 --- !u!114 &3675993728335788441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,4 +162,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startLife: 10
   destroyOnKill: 1
-  delayToKill: 0.5
+  delayToKill: 1.5
+  _flashColor: {fileID: 0}
