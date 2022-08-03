@@ -3650,7 +3650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.990566, g: 0.65881985, b: 0.65881985, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5379,7 +5379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coins: {fileID: 11400000, guid: 6f9c89351fdd27b4098db1c0c11f4420, type: 2}
-  coinsRed: {fileID: 0}
+  coinsRed: {fileID: 11400000, guid: 1ccdf6d17b5b3a244ad26506f6fb311b, type: 2}
 --- !u!4 &1655559944
 Transform:
   m_ObjectHideFlags: 0
