@@ -98,6 +98,11 @@ public class Player : MonoBehaviour
         {
             myRigibody.velocity = Vector2.up * soPlayerSetup.forceJump;
             myRigibody.transform.localScale = Vector2.one;
+            if (myRigibody.transform.localScale.x != -1)
+            {
+                myRigibody.transform.DOScaleX(-1, soPlayerSetup.playerSwipeDuration);
+            }
+            
 
             DOTween.Kill(myRigibody.transform);
 
@@ -109,7 +114,6 @@ public class Player : MonoBehaviour
         myRigibody.transform.DOScaleY(soPlayerSetup.jumpScaleY, soPlayerSetup.animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(soPlayerSetup.ease);
         myRigibody.transform.DOScaleX(soPlayerSetup.jumpScaleX, soPlayerSetup.animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(soPlayerSetup.ease);
     }
-
     public void DestroyMe()
     {
         Destroy(gameObject);
