@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2834919417811502228}
   - component: {fileID: 4423700799663850361}
+  - component: {fileID: 8791645085705946695}
   m_Layer: 0
   m_Name: PFB_Gun
   m_TagString: Untagged
@@ -82,3 +83,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8791645085705946695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6396408857726973579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1077c01badb2eb24480777c261ddef95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabProjectile: {fileID: 2001631762759861416, guid: bbca99618de2e4040ad3c8c048d4dcd2, type: 3}
+  positionToShoot: {fileID: 0}
+  timeBetweenShoot: 0.3
+  playerSideReference: {fileID: 8007466312498025151, guid: 00afc9fb4087652419d090da0b825d97, type: 3}

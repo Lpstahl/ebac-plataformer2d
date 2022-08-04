@@ -25,6 +25,10 @@ public class Player : MonoBehaviour
         }
 
         _currentPlayer = Instantiate(soPlayerSetup.player, transform);
+
+        GunBase gunBase = _currentPlayer.GetComponentInChildren<GunBase>();
+
+        gunBase.SetPlayer(this);
     }
 
     private void OnPlayerKill()
@@ -95,24 +99,27 @@ public class Player : MonoBehaviour
     private void HandleJump()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-        {
+
             myRigibody.velocity = Vector2.up * soPlayerSetup.forceJump;
-            myRigibody.transform.localScale = Vector2.one;
+            //myRigibody.transform.localScale = Vector2.one;  
             if (myRigibody.transform.localScale.x != -1)
             {
                 myRigibody.transform.DOScaleX(-1, soPlayerSetup.playerSwipeDuration);
             }
-            
 
             DOTween.Kill(myRigibody.transform);
 
             HandleScaleJump();
-        }
+
     }
     private void HandleScaleJump()
     {
+        float mult = 1f;
+        if (transform.localScale.x < 0)
+            mult = -1;
+
         myRigibody.transform.DOScaleY(soPlayerSetup.jumpScaleY, soPlayerSetup.animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(soPlayerSetup.ease);
-        myRigibody.transform.DOScaleX(soPlayerSetup.jumpScaleX, soPlayerSetup.animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(soPlayerSetup.ease);
+        myRigibody.transform.DOScaleX(soPlayerSetup.jumpScaleX * mult, soPlayerSetup.animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(soPlayerSetup.ease);
     }
     public void DestroyMe()
     {

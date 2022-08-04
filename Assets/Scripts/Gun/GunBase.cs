@@ -12,6 +12,13 @@ public class GunBase : MonoBehaviour
 
     private Coroutine _currentCorotine;
 
+    private Player _player;
+
+    public void SetPlayer(Player player)
+    {
+        _player = player;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.S))
@@ -37,6 +44,6 @@ public class GunBase : MonoBehaviour
     {
         var projectile = Instantiate(prefabProjectile);
         projectile.transform.position = positionToShoot.position;
-        projectile.side = playerSideReference.transform.localScale.x;
+        projectile.side = _player.transform.localScale.x;
     }
 }
