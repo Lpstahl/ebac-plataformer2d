@@ -100,7 +100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4272125703010702956
 Transform:
   m_ObjectHideFlags: 0
@@ -130,6 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   compareTag: Player
   coin: {fileID: 4272125703010702955}
+  coinType: 0
 --- !u!58 &4925069144831940285
 CircleCollider2D:
   m_ObjectHideFlags: 0
