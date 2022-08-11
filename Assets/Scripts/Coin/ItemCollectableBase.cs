@@ -6,6 +6,12 @@ public class ItemCollectableBase : MonoBehaviour
 {
     public string compareTag = "Player";
     public GameObject coin;
+    public ParticleSystem particleSystem;
+
+    private void Awake()
+    {
+        if (particleSystem != null) particleSystem.transform.SetParent(null);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,8 +26,8 @@ public class ItemCollectableBase : MonoBehaviour
         OnCollect();
     }
     protected virtual void OnCollect() 
-    { 
-    
+    {
+        
     }
 
 
