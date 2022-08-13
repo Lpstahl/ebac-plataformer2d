@@ -211,6 +211,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 863463951507373890, guid: 607586a5c60a55142858aff23da4c56c, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 863463951507373948, guid: 607586a5c60a55142858aff23da4c56c, type: 3}
       propertyPath: m_Name
       value: PFB_ParticleSystems
