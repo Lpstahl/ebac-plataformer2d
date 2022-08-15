@@ -17,37 +17,55 @@ public class Player : MonoBehaviour
 
     private Animator _currentPlayer;
 
+    [Header("Jump Collision Check")]
+    public Collider2D collider2D;
+    public float distToGround;
+    public float spaceToGround = .1f;
+    public ParticleSystem jumpVfx;
+
     private void Awake()
     {
-        if(healthBase != null)
+        if (healthBase != null)
         {
             healthBase.OnKill += OnPlayerKill;
         }
 
         _currentPlayer = Instantiate(soPlayerSetup.player, transform);
 
+        if (collider2D != null)
+        {
+            distToGround = collider2D.bounds.extents.y;
+        }
+
         GunBase gunBase = _currentPlayer.GetComponentInChildren<GunBase>();
 
         gunBase.SetPlayer(this);
+
+      
+    }
+
+    private bool IsGrounded()
+    {
+        Debug.DrawRay(transform.position, -Vector2.up, Color.magenta, distToGround + spaceToGround);
+        return Physics2D.Raycast(transform.position, -Vector2.up, distToGround + spaceToGround);
     }
 
     private void OnPlayerKill()
     {
-
         healthBase.OnKill -= OnPlayerKill;
         _currentPlayer.SetTrigger(soPlayerSetup.triggerDeath);
-        
     }
 
     private void Update()
     {
+        IsGrounded();
         HandleJump();
-        HandleMoviment();   
+        HandleMoviment();
     }
 
     private void HandleMoviment()
     {
-        if (Input.GetKey(KeyCode.LeftShift)) { 
+        if (Input.GetKey(KeyCode.LeftShift)) {
             _currentSpeed = soPlayerSetup.speedRun;
             _currentPlayer.speed = 2;
         }
@@ -86,7 +104,7 @@ public class Player : MonoBehaviour
 
         Debug.Log(myRigibody.velocity);
 
-        if(myRigibody.velocity.x > 0)
+        if (myRigibody.velocity.x > 0)
         {
             myRigibody.velocity += soPlayerSetup.friction;
         }
@@ -98,20 +116,27 @@ public class Player : MonoBehaviour
 
     private void HandleJump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
 
             myRigibody.velocity = Vector2.up * soPlayerSetup.forceJump;
-            //myRigibody.transform.localScale = Vector2.one;  
-            if (myRigibody.transform.localScale.x != -1)
-            {
-                myRigibody.transform.DOScaleX(-1, soPlayerSetup.playerSwipeDuration);
-            }
+        //myRigibody.transform.localScale = Vector2.one;  
+        if (myRigibody.transform.localScale.x != -1)
+        {
+            myRigibody.transform.DOScaleX(-1, soPlayerSetup.playerSwipeDuration);
+            
+        }
 
-            DOTween.Kill(myRigibody.transform);
+        DOTween.Kill(myRigibody.transform);
 
-            HandleScaleJump();
-
+        HandleScaleJump();
+        PlayJumpVfx();
     }
+
+    private void PlayJumpVfx()
+    {
+        if (jumpVfx != null) jumpVfx.Play();
+    }
+
     private void HandleScaleJump()
     {
         float mult = 1f;
