@@ -130,7 +130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   compareTag: Player
   coin: {fileID: 4272125703010702955}
-  coinType: 0
+  particleSystem: {fileID: 0}
+  coinType: 1
 --- !u!58 &4925069144831940285
 CircleCollider2D:
   m_ObjectHideFlags: 0
