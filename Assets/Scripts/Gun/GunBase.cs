@@ -9,6 +9,8 @@ public class GunBase : MonoBehaviour
     public Transform positionToShoot;
     public float timeBetweenShoot = .3f;
     public Transform playerSideReference;
+    //public Vector3 direction;
+    //public float side = 1;
 
     private Coroutine _currentCorotine;
 
@@ -36,7 +38,9 @@ public class GunBase : MonoBehaviour
     private void PlayShotVfx()
     {
         VFXManager.instance.PlayVFXByType(VFXManager.VFXType.SHOOT, transform.position);
-        
+        //CODE para VFX acompnhar a direção do shoot (verificar)
+        //transform.Translate(direction * Time.deltaTime * side);
+
     }
 
     IEnumerator StartShoot()
