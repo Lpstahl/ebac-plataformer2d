@@ -8,7 +8,8 @@ public class VFXManager : Singleton<VFXManager>
     public enum VFXType
     {
         JUMP,
-        RUN
+        RUN,
+        SHOOT
     }
 
     public List<VFXManagerSetup> vfxSetup;

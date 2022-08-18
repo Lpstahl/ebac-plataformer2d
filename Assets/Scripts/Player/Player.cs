@@ -117,19 +117,20 @@ public class Player : MonoBehaviour
     private void HandleJump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
-
-            myRigibody.velocity = Vector2.up * soPlayerSetup.forceJump;
-        //myRigibody.transform.localScale = Vector2.one;  
-        if (myRigibody.transform.localScale.x != -1)
         {
-            myRigibody.transform.DOScaleX(-1, soPlayerSetup.playerSwipeDuration);
-            
+            myRigibody.velocity = Vector2.up * soPlayerSetup.forceJump;
+            //myRigibody.transform.localScale = Vector2.one;  
+            if (myRigibody.transform.localScale.x != -1)
+            {
+                myRigibody.transform.DOScaleX(-1, soPlayerSetup.playerSwipeDuration);
+
+            }
+
+            DOTween.Kill(myRigibody.transform);
+
+            HandleScaleJump();
+            PlayJumpVfx();
         }
-
-        DOTween.Kill(myRigibody.transform);
-
-        HandleScaleJump();
-        PlayJumpVfx();
     }
 
     private void PlayJumpVfx()
