@@ -30,19 +30,14 @@ public class GunBase : MonoBehaviour
         {
             if (_currentCorotine != null)
                 StopCoroutine(_currentCorotine);
-        }
-
-        //CORRIGIR ESTE CÓDIGO
-        //{
-            //PlayShotVfx();
-        //}    
+        } 
     }
 
-    //private void PlayShotVfx()
-    //{
-    //    VFXManager.instance.PlayVFXByType(VFXManager.VFXType.SHOOT, transform.position);
+    private void PlayShotVfx()
+    {
+        VFXManager.instance.PlayVFXByType(VFXManager.VFXType.SHOOT, transform.position);
         
-   // }
+    }
 
     IEnumerator StartShoot()
     {
@@ -57,5 +52,6 @@ public class GunBase : MonoBehaviour
         var projectile = Instantiate(prefabProjectile);
         projectile.transform.position = positionToShoot.position;
         projectile.side = _player.transform.localScale.x;
+        PlayShotVfx();
     }
 }
