@@ -21,16 +21,28 @@ public class GunBase : MonoBehaviour
 
     void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.S))
         {
             _currentCorotine = StartCoroutine(StartShoot());
         }
         else if (Input.GetKeyUp(KeyCode.S))
-            {
-                if (_currentCorotine != null) 
-                    StopCoroutine(_currentCorotine);
-            }
+        {
+            if (_currentCorotine != null)
+                StopCoroutine(_currentCorotine);
+        }
+
+        //CORRIGIR ESTE CÓDIGO
+        //{
+            //PlayShotVfx();
+        //}    
     }
+
+    //private void PlayShotVfx()
+    //{
+    //    VFXManager.instance.PlayVFXByType(VFXManager.VFXType.SHOOT, transform.position);
+        
+   // }
 
     IEnumerator StartShoot()
     {

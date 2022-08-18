@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5940950337076576987}
   - component: {fileID: 5940950337076576986}
   m_Layer: 0
-  m_Name: PFB_ParticleSystems_JUMP
+  m_Name: PFB_ParticleSystems_SHOOT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
