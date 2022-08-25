@@ -8,6 +8,9 @@ public class ItemCollectableBase : MonoBehaviour
     public GameObject coin;
     public ParticleSystem particleSystem;
 
+    [Header("Sounds")]
+    public AudioSource audioSource;
+
     private void Awake()
     {
         if (particleSystem != null) particleSystem.transform.SetParent(null);
@@ -28,13 +31,17 @@ public class ItemCollectableBase : MonoBehaviour
             particleSystem.Play();  
             Destroy(particleSystem.gameObject, 2f);
         }
+
+        
+
         coin.gameObject.SetActive(false);
         OnCollect();
+        
 
     }
     protected virtual void OnCollect() 
     {
-        
+        if (audioSource != null) audioSource.Play();
     }
 
 

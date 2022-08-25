@@ -6,15 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SCN_Menu.unity
+    path: Assets/Scenes/SCN_Start.unity
     guid: e65ca04674d4e634ab6a4617c725d4e7
   - enabled: 1
-    path: Assets/Scenes/SCN_Level01.unity
-    guid: 8726a4a9bdae62a4b93fcf2539a6f2a9
-  - enabled: 1
-    path: Assets/Scenes/SCN_Cedits.unity
-    guid: 4e6b990b55c0e22408b701ffafbd9a11
+    path: Assets/Scenes/SCN_Menu.unity
+    guid: 4e72db566f9e78e4f89099a3b5c13ebc
   - enabled: 1
     path: Assets/Scenes/SCN_PrototypeGameplay.unity
     guid: 668bca9afebc59f47bc9d07b91108d9a
+  - enabled: 1
+    path: Assets/Scenes/SCN_CREDITS.unity
+    guid: 149aed4a6dd3b254ebc0221cd3aaff62
+  - enabled: 1
+    path: Assets/Scenes/SCN_Menu_SOUND.unity
+    guid: ba4b1a839acce9443b808cb547a1b7a4
   m_configObjects: {}
