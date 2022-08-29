@@ -32,7 +32,12 @@ public class ItemCollectableBase : MonoBehaviour
             Destroy(particleSystem.gameObject, 2f);
         }
 
-        
+        //Desligar collider da moeda apos ser coletada
+        Collider2D[] cols = gameObject.GetComponentsInChildren<Collider2D>();
+        for(int i = 0; i < cols.Length; ++i)
+        {
+            cols[i].enabled = false;
+        }        
 
         coin.gameObject.SetActive(false);
         OnCollect();
