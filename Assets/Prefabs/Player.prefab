@@ -148,6 +148,10 @@ MonoBehaviour:
   myRigibody: {fileID: 3675993728335788444}
   healthBase: {fileID: 3675993728335788441}
   soPlayerSetup: {fileID: 11400000, guid: 85c8121326bbe954e844039c069a8369, type: 2}
+  collider2D: {fileID: 3675993728335788445}
+  distToGround: 0
+  spaceToGround: 0.1
+  jumpVfx: {fileID: 5940950337076576987, guid: f0adf937ceda5434f9d7018e98028e2d, type: 3}
 --- !u!114 &3675993728335788441
 MonoBehaviour:
   m_ObjectHideFlags: 0

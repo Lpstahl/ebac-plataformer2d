@@ -5949,7 +5949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8835229685202505509, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
@@ -7343,7 +7343,7 @@ PrefabInstance:
     - target: {fileID: 3675993728335788440, guid: e3e3ed5e3f82efc4db31fd8fa7799117, type: 3}
       propertyPath: jumpVfx
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5940950337076576987, guid: f0adf937ceda5434f9d7018e98028e2d, type: 3}
     - target: {fileID: 3675993728335788440, guid: e3e3ed5e3f82efc4db31fd8fa7799117, type: 3}
       propertyPath: animator
       value: 

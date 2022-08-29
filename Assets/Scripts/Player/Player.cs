@@ -99,7 +99,6 @@ public class Player : MonoBehaviour
         else
         {
             _currentPlayer.SetBool(soPlayerSetup.boolRun, false);
-            _currentPlayer.SetBool(soPlayerSetup.boolRun, false);
         }
 
         Debug.Log(myRigibody.velocity);

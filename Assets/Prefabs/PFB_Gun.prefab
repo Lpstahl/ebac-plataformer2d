@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabProjectile: {fileID: 2001631762759861416, guid: bbca99618de2e4040ad3c8c048d4dcd2, type: 3}
-  positionToShoot: {fileID: 0}
+  positionToShoot: {fileID: 2834919417811502228}
   timeBetweenShoot: 0.3
   playerSideReference: {fileID: 8007466312498025151, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
 --- !u!1001 &7252561325898503970
