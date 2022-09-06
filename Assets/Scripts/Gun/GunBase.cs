@@ -9,6 +9,7 @@ public class GunBase : MonoBehaviour
     public Transform positionToShoot;
     public float timeBetweenShoot = .3f;
     public Transform playerSideReference;
+    public AudioSource audioGun;
     //public Vector3 direction;
     //public float side = 1;
 
@@ -53,6 +54,8 @@ public class GunBase : MonoBehaviour
     }
     public void Shoot()
     {
+        if (audioGun != null) audioGun.Play();
+
         var projectile = Instantiate(prefabProjectile);
         projectile.transform.position = positionToShoot.position;
         projectile.side = _player.transform.localScale.x;
