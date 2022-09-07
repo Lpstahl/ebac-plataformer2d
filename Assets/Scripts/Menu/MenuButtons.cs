@@ -33,7 +33,7 @@ public class MenuButtons : MonoBehaviour
         {
             var b = buttons[i];
             b.SetActive(true);
-            b.transform.DOScale(1, duration).SetDelay(i*delay).SetEase(ease);
+            b.transform.DOScale(1, duration).SetDelay(i*delay).SetEase(ease).SetUpdate(true);
         }
     }
 
