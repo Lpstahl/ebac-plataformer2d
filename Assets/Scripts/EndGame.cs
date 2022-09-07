@@ -7,6 +7,7 @@ public class EndGame : MonoBehaviour
     public string tagToCompare = "Player";
 
     public GameObject uiEndGame;
+    public BoxCollider2D boxCollider2d;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
